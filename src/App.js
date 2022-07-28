@@ -6,19 +6,27 @@ import {
   Routes,
   Route,
 }from "react-router-dom";
+
 import Header from './Pages/Header/Header';
-import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
+import Friends from './Pages/Friends/Friends';
+import Datils from './Pages/Datil/Datils';
+import Posts from './Pages/Posts/Posts';
+import PostsDatal from './Pages/PostDati/PostsDatal';
+
 
 function App() {
   return (
     <div >
       <Header />
-     <Routes>
-      <Route path='/about'element={<About />}></Route>
-      <Route path='/contact'element={<Contact />}></Route>
-     </Routes>
-
+      <Routes>
+        <Route path='/friends' element={<Friends />}></Route>
+        <Route path='/friends/:id' element={<Datils />}></Route>
+        <Route path='/posts' element={< Posts></Posts>}>
+          <Route path=':postid' element={<PostsDatal />}></Route>
+        </Route>
+        
+        
+      </Routes>
       
     </div>
   );
