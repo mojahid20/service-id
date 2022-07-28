@@ -13,6 +13,9 @@ import Datils from './Pages/Datil/Datils';
 import Posts from './Pages/Posts/Posts';
 import PostsDatal from './Pages/PostDati/PostsDatal';
 
+import Restrorand from './Pages/Restrorant/Restrorand';
+import MealDati from './Pages/MealDa/MealDati';
+
 
 function App() {
   return (
@@ -24,7 +27,8 @@ function App() {
         <Route path='/posts' element={< Posts></Posts>}>
           <Route path=':postid' element={<PostsDatal />}></Route>
         </Route>
-        
+       <Route path='/restrorant' element={<Restrorand />}></Route>
+       <Route path='/restrorant/:id' element={<MealDati />}></Route>
         
       </Routes>
       
